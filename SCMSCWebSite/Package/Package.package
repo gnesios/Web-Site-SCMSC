@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="c870263b-4def-4ff2-ae1e-e89ff7d66990" solutionId="c870263b-4def-4ff2-ae1e-e89ff7d66990" resetWebServer="false" sharePointProductVersion="19.0" name="SCMSCWebSite" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="9c830a69-8058-4783-982b-456b6dd861c4" />
+  </features>
+</package>

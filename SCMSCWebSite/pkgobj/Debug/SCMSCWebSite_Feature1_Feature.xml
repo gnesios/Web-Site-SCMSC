@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Description="Características necesarias para el correcto funcionamiento y administración del sitio web." Id="46af4c34-c286-427d-bbcc-4e7b61db22a9" Scope="Site" Title="SCMSC Sitio Web">
+  <ElementManifests>
+    <ElementManifest Location="WPMainTabs\Elements.xml" />
+    <ElementFile Location="WPMainTabs\WPMainTabs.webpart" />
+    <ElementManifest Location="WPMainContentA\Elements.xml" />
+    <ElementFile Location="WPMainContentA\WPMainContentA.webpart" />
+    <ElementManifest Location="WPMainContentB\Elements.xml" />
+    <ElementFile Location="WPMainContentB\WPMainContentB.webpart" />
+    <ElementManifest Location="WPContactForm\Elements.xml" />
+    <ElementFile Location="WPContactForm\WPContactForm.webpart" />
+  </ElementManifests>
+</Feature>

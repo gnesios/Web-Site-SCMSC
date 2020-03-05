@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="SCMSCWebSite.WPMainContentB.WPMainContentB, $SharePoint.Project.AssemblyFullName$" />
+      <importErrorMessage>$Resources:core,ImportErrorMessage;</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="Title" type="string">SCMSC - Contenido Principal B</property>
+        <property name="Description" type="string">Contenido principal zona central de la página de inicio.</property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>

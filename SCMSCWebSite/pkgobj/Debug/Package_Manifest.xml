@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="c870263b-4def-4ff2-ae1e-e89ff7d66990" SharePointProductVersion="19.0">
+  <Assemblies>
+    <Assembly Location="SCMSCWebSite.dll" DeploymentTarget="GlobalAssemblyCache">
+      <SafeControls>
+        <SafeControl Assembly="SCMSCWebSite, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7eaa6694cfead151" Namespace="SCMSCWebSite.WPMainTabs" TypeName="*" />
+        <SafeControl Assembly="SCMSCWebSite, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7eaa6694cfead151" Namespace="SCMSCWebSite.WPMainContentA" TypeName="*" />
+        <SafeControl Assembly="SCMSCWebSite, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7eaa6694cfead151" Namespace="SCMSCWebSite.WPMainContentB" TypeName="*" />
+        <SafeControl Assembly="SCMSCWebSite, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7eaa6694cfead151" Namespace="SCMSCWebSite.WPContactForm" TypeName="*" />
+      </SafeControls>
+    </Assembly>
+  </Assemblies>
+  <TemplateFiles>
+    <TemplateFile Location="CONTROLTEMPLATES\SCMSCWebSite\WPMainTabs\WPMainTabsUserControl.ascx" />
+    <TemplateFile Location="CONTROLTEMPLATES\SCMSCWebSite\WPMainContentA\WPMainContentAUserControl.ascx" />
+    <TemplateFile Location="CONTROLTEMPLATES\SCMSCWebSite\WPMainContentB\WPMainContentBUserControl.ascx" />
+    <TemplateFile Location="CONTROLTEMPLATES\SCMSCWebSite\WPContactForm\WPContactFormUserControl.ascx" />
+  </TemplateFiles>
+  <FeatureManifests>
+    <FeatureManifest Location="SCMSCWebSite_Feature1\Feature.xml" />
+  </FeatureManifests>
+</Solution>

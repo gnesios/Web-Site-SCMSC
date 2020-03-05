@@ -1,0 +1,139 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{33E70A8E-90F5-49C2-BA1D-ABE4A7034E18}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SCMSCWebSite</RootNamespace>
+    <AssemblyName>SCMSCWebSite</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetOfficeVersion>19.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <MinimumVisualStudioVersion>15.0</MinimumVisualStudioVersion>
+    <MinimumOfficeToolsVersion>14.1</MinimumOfficeToolsVersion>
+    <SandboxedSolution>False</SandboxedSolution>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SharePointConnector.cs" />
+    <Compile Include="WPContactForm\WPContactForm.cs" />
+    <Compile Include="WPContactForm\WPContactFormUserControl.ascx.cs">
+      <DependentUpon>WPContactFormUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WPContactForm\WPContactFormUserControl.ascx.designer.cs">
+      <DependentUpon>WPContactFormUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WPMainContentA\WPMainContentA.cs" />
+    <Compile Include="WPMainContentA\WPMainContentAUserControl.ascx.cs">
+      <DependentUpon>WPMainContentAUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WPMainContentA\WPMainContentAUserControl.ascx.designer.cs">
+      <DependentUpon>WPMainContentAUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WPMainContentB\WPMainContentB.cs" />
+    <Compile Include="WPMainContentB\WPMainContentBUserControl.ascx.cs">
+      <DependentUpon>WPMainContentBUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WPMainContentB\WPMainContentBUserControl.ascx.designer.cs">
+      <DependentUpon>WPMainContentBUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WPMainTabs\WPMainTabs.cs" />
+    <Compile Include="WPMainTabs\WPMainTabsUserControl.ascx.cs">
+      <DependentUpon>WPMainTabsUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WPMainTabs\WPMainTabsUserControl.ascx.designer.cs">
+      <DependentUpon>WPMainTabsUserControl.ascx.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Features\Feature1\Feature1.feature">
+      <FeatureId>{9c830a69-8058-4783-982b-456b6dd861c4}</FeatureId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="Package\Package.package">
+      <PackageId>{c870263b-4def-4ff2-ae1e-e89ff7d66990}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="WPContactForm\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{468d2bd9-cc35-497d-9d3e-89d839a49d43}</SharePointProjectItemId>
+    </None>
+    <None Include="WPContactForm\WPContactForm.webpart" />
+    <None Include="WPMainContentA\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{1b92b372-1e7b-4290-9288-8e4d952dc93a}</SharePointProjectItemId>
+    </None>
+    <None Include="WPMainContentA\WPMainContentA.webpart" />
+    <None Include="WPMainContentB\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{16019f2d-d96f-442b-976b-6654ba883667}</SharePointProjectItemId>
+    </None>
+    <None Include="WPMainContentB\WPMainContentB.webpart" />
+    <None Include="WPMainTabs\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{be7a6f15-8c43-4cf7-a63f-567ba1eb3eba}</SharePointProjectItemId>
+    </None>
+    <None Include="WPMainTabs\WPMainTabs.webpart" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Features\Feature1\Feature1.Template.xml">
+      <DependentUpon>Feature1.feature</DependentUpon>
+    </Content>
+    <Content Include="WPContactForm\Elements.xml" />
+    <Content Include="WPContactForm\WPContactFormUserControl.ascx" />
+    <Content Include="WPMainContentA\Elements.xml" />
+    <Content Include="WPMainContentA\WPMainContentAUserControl.ascx" />
+    <Content Include="WPMainContentB\Elements.xml" />
+    <Content Include="WPMainContentB\WPMainContentBUserControl.ascx" />
+    <Content Include="WPMainTabs\Elements.xml" />
+    <Content Include="WPMainTabs\WPMainTabsUserControl.ascx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>

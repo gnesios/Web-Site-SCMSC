@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="SCMSCWebSite.WPMainTabs.WPMainTabs, $SharePoint.Project.AssemblyFullName$" />
+      <importErrorMessage>$Resources:core,ImportErrorMessage;</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="Title" type="string">SCMSC - Pestañas principales</property>
+        <property name="Description" type="string">Pestañas de navegación principales de la página de inicio.</property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>
